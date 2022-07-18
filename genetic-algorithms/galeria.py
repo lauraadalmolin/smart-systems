@@ -20,11 +20,11 @@ print("--- Algoritmo de força bruta ---")
 print("Número de imagens: " + str(number_of_pictures))
 
 t0 = time.time()
-best = run_bruteforce(pictures, max_tags)
+bf_fit, bf_individual = run_bruteforce(pictures, max_tags)
 t1 = time.time()
 
-print("Melhor indivíduo: " + str(best[1]))
-print("Likes: " + str(best[0]))
+print("Melhor indivíduo: " + str(bf_individual))
+print("Likes: " + str(bf_fit))
 
 print("Tempo: " + str(t1-t0))
 

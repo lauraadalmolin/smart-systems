@@ -1,6 +1,6 @@
 from genetic2022 import *
 
-def run_bruteforce(itens, peso_max):
+def run_bruteforce(itens, max_tags):
     n_itens = len(itens)
     
     # indivíduo inicial (todos zeros)
@@ -18,9 +18,9 @@ def run_bruteforce(itens, peso_max):
     
     while individuo.uint < end.uint:
         individuo = BitArray(uint = individuo.uint+1, length=n_itens)
-        fit = fitness(individuo ,itens ,peso_max)
+        fit = fitness(individuo, itens, max_tags)
 
-        if fit > best [0]:
+        if fit > best[0]:
             best = (fit, individuo)
         combos += 1
 
